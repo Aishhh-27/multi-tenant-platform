@@ -1,0 +1,24 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# Kubernetes / Minikube
+.minikube/
+kubeconfig
+
+# Binaries
+*.exe
+*.out
+*.bin
+platform
+minikube-linux-amd64
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+
+# Go
+vendor/
