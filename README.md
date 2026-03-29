@@ -1,3 +1,4 @@
+![CI](https://github.com/Aishhh-27/multi-tenant-platform/actions/workflows/ci.yml/badge.svg)
 # GitLab Multi-Tenant Environment Automation Platform
 
 ## Overview
