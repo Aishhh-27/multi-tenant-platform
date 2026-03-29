@@ -5,7 +5,7 @@
 
 This project implements a multi-tenant environment automation platform inspired by GitLab-style infrastructure workflows. It provisions, manages, monitors, and heals isolated tenant environments using a combination of Go, Terraform, Kubernetes, and Helm.
 
-The system is designed to demonstrate practical Site Reliability Engineering (SRE) concepts including infrastructure as code, workload isolation, observability, and automated remediation.
+The system is designed to demonstrate practical Site Reliability Engineering (SRE) concepts including infrastructure as code, workload isolation, observability, and automated remediation.Designed to simulate GitLab-style environment automation workflows.
 
 ---
 
