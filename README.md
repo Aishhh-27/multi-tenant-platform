@@ -89,7 +89,10 @@ When a failure is detected, the system automatically deletes the affected pods, 
 
 ![Healing](screenshots/healing.png)
 
+The system detects failing pods and deletes only the affected workloads instead of restarting the entire namespace.
+
 ---
+
 
 ## Failure Simulation
 
