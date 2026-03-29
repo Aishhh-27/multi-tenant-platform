@@ -13,3 +13,9 @@ func Create(name string) {
 		fmt.Println("Error creating tenant folder:", err)
 	}
 }
+
+func Delete(name string) {
+	fmt.Println("Removing tenant folder:", name)
+
+	os.RemoveAll("tenants/" + name)
+}

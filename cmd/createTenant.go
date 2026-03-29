@@ -5,10 +5,10 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/Aishhh-27/gitlab-multi-tenant-platform/internal/tenant"
-	"github.com/Aishhh-27/gitlab-multi-tenant-platform/internal/terraform"
-	"github.com/Aishhh-27/gitlab-multi-tenant-platform/internal/kubernetes"
-	"github.com/Aishhh-27/gitlab-multi-tenant-platform/internal/helm"
+	"gitlab-multi-tenant-platform/internal/tenant"
+	"gitlab-multi-tenant-platform/internal/terraform"
+	"gitlab-multi-tenant-platform/internal/kubernetes"
+	"gitlab-multi-tenant-platform/internal/helm"
 )
 
 var createTenantCmd = &cobra.Command{

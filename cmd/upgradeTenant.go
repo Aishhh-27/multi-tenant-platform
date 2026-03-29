@@ -12,7 +12,7 @@ import (
 
 // upgradeTenantCmd represents the upgradeTenant command
 var upgradeTenantCmd = &cobra.Command{
-	Use:   "upgradeTenant",
+	Use:   "upgrade-tenant",
 	Short: "A brief description of your command",
 	Long: `A longer description that spans multiple lines and likely contains examples
 and usage of using your command. For example:

@@ -18,3 +18,9 @@ func Deploy(tenant string) {
 		fmt.Println("Helm deploy failed:", err)
 	}
 }
+
+func Delete(tenant string) {
+	fmt.Println("Deleting Helm release:", tenant)
+
+	exec.Command("helm", "uninstall", tenant, "-n", tenant).Run()
+}

@@ -13,3 +13,9 @@ func CreateNamespace(name string) {
 		fmt.Println("Namespace may already exist:", err)
 	}
 }
+
+func DeleteNamespace(name string) {
+	fmt.Println("Deleting namespace:", name)
+
+	exec.Command("kubectl", "delete", "namespace", name).Run()
+}
