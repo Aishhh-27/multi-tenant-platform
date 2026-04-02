@@ -24,17 +24,19 @@ The system is designed to demonstrate practical Site Reliability Engineering (SR
 
 The platform follows a simple execution flow:
 
-CLI → Terraform → Kubernetes → Helm
-↓
-Prometheus + Grafana
-↓
-Auto-healing loop
-
-Each tenant is provisioned with:
-
-* A dedicated Terraform workspace
-* A Kubernetes namespace
-* An isolated Helm release
+User
+  ↓
+Go CLI (tenant manager)
+  ↓
+Terraform (provisions infra per tenant)
+  ↓
+Kubernetes Cluster
+  ↓
+Namespace per Tenant
+  ↓
+Helm → GitLab / App Deployment
+  ↓
+Prometheus → Monitoring
 
 ---
 
