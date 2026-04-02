@@ -4,7 +4,7 @@ Inspired by GitLab Dedicated multi-tenant environment automation systems.
 
 ## Overview
 
-This project implements a multi-tenant environment automation platform inspired by GitLab-style infrastructure workflows. It provisions, manages, monitors, and heals isolated tenant environments using a combination of Go, Terraform, Kubernetes, and Helm.
+This project simulates a production-grade multi-tenant environment automation platform inspired by GitLab Dedicated, designed to provision, manage, and operate multiple isolated environments at scale using infrastructure-as-code and Kubernetes.
 
 The system is designed to demonstrate practical Site Reliability Engineering (SRE) concepts including infrastructure as code, workload isolation, observability, and automated remediation.Designed to simulate GitLab-style environment automation workflows.
 
@@ -18,6 +18,8 @@ The system is designed to demonstrate practical Site Reliability Engineering (SR
 * Application deployment using Helm charts
 * Observability using Prometheus and Grafana
 * Automated detection and recovery of failing workloads
+* The Go CLI acts as a control plane for managing tenant lifecycle operations in a repeatable and automated manner.
+* Designed with SRE principles such as automation, reliability, observability, and minimal manual intervention.
 
 ---
 
@@ -40,6 +42,15 @@ Helm → GitLab / App Deployment
 Prometheus → Monitoring
 
 ---
+##  Why Multi-Tenant Architecture?
+
+Multi-tenancy allows multiple environments (tenants) to run on shared infrastructure while maintaining isolation.
+
+Benefits:
+- Efficient resource utilization
+- Easier scaling
+- Centralized management
+- Faster provisioning
 
 ## Usage
 
@@ -139,14 +150,14 @@ This triggers repeated restarts which are detected and handled by the auto-heali
 
 ---
 
-## Scaling Capability
+##  Scaling Capability
 
-This system is designed to support multiple tenants using:
-- Automated provisioning
-- Namespace isolation
-- Repeatable Terraform modules
+The platform is designed to handle multiple tenants using:
+- Terraform-based reproducible infrastructure
+- Kubernetes namespace isolation
+- Automated provisioning via CLI
 
-Tested with 5–10 tenants (can scale further with cluster capacity).
+Tested with multiple tenants and designed to scale further based on cluster capacity.
 
 ## Project Structure
 
@@ -162,11 +173,12 @@ screenshots/        Dashboard and execution output
 
 ## Observability
 
-- Prometheus collects cluster and pod metrics
-- Enables monitoring across multiple tenants
-- Alerts can be configured for:
-  - Pod failures
-  - Resource exhaustion
+- Prometheus is used to monitor:
+- Pod health across tenants
+- Resource usage
+- Cluster-level metrics
+
+This enables visibility into multiple tenant environments and helps detect failures early.
 
 ## Notes
 
@@ -187,7 +199,7 @@ screenshots/        Dashboard and execution output
 
 ## Summary
 
-This project demonstrates a complete workflow for managing multi-tenant environments with an emphasis on reliability and observability. It reflects practical patterns used in real-world SRE and platform engineering systems.
+This project demonstrates a complete workflow for managing multi-tenant environments with an emphasis on reliability and observability. It reflects practical patterns used in real-world SRE and platform engineering systems.It also demonstrates the transition from managing individual environments to operating a scalable platform capable of handling multiple tenants efficiently.
 
 
 ## Author
