@@ -128,7 +128,7 @@ This triggers repeated restarts which are detected and handled by the auto-heali
 
 ---
 
-**## Tenant Lifecycle**
+## Tenant Lifecycle
 
 1. Create tenant → CLI triggers Terraform
 2. Namespace created in Kubernetes
