@@ -62,6 +62,21 @@ Prometheus → Monitoring
 
 ---
 
+## System Design Decisions
+
+### Why Namespace-per-Tenant?
+Each tenant is isolated using Kubernetes namespaces to ensure:
+- Resource separation
+- Fault isolation
+- Independent scaling
+
+### Why Terraform?
+Ensures reproducible infrastructure and safe state management.
+
+### Tradeoffs
+- Namespace isolation vs cluster-per-tenant
+- Shared cluster reduces cost but requires strict isolation
+
 ## Observability
 
 Grafana dashboards are used to monitor tenant workloads.
