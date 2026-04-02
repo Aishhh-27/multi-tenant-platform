@@ -130,7 +130,7 @@ This triggers repeated restarts which are detected and handled by the auto-heali
 
 ---
 
-##  Tenant Lifecycle
+**## Tenant Lifecycle**
 
 1. Create tenant → CLI triggers Terraform
 2. Namespace created in Kubernetes
@@ -141,7 +141,7 @@ This triggers repeated restarts which are detected and handled by the auto-heali
 
 ---
 
-## Scaling Capability
+**## Scaling Capability**
 
 This system is designed to support multiple tenants using:
 - Automated provisioning
@@ -150,7 +150,7 @@ This system is designed to support multiple tenants using:
 
 Tested with 5–10 tenants (can scale further with cluster capacity).
 
-## Project Structure
+**## Project Structure**
 
 ```
 cmd/                CLI commands
@@ -162,7 +162,7 @@ screenshots/        Dashboard and execution output
 
 ---
 
-##  Observability
+**##  Observability**
 
 - Prometheus collects cluster and pod metrics
 - Enables monitoring across multiple tenants
@@ -170,14 +170,14 @@ screenshots/        Dashboard and execution output
   - Pod failures
   - Resource exhaustion
 
-## Notes
+**## Notes**
 
 * The auto-healing logic currently operates at the namespace level and deletes all pods when a failure is detected. This can be refined to target only failing pods.
 * Metrics visibility depends on Prometheus scrape intervals, so short-lived pods may not always appear in dashboards.
 
 ---
 
-## Future Improvements
+**## Future Improvements**
 
 * Fine-grained healing (target specific pods instead of all pods)
 * Support for multiple cloud providers
@@ -187,7 +187,7 @@ screenshots/        Dashboard and execution output
 
 ---
 
-## Summary
+**## Summary**
 
 This project demonstrates a complete workflow for managing multi-tenant environments with an emphasis on reliability and observability. It reflects practical patterns used in real-world SRE and platform engineering systems.
 
