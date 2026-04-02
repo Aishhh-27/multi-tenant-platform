@@ -124,8 +124,6 @@ Result:
 
 This demonstrates self-healing infrastructure.
 
-```
-
 This triggers repeated restarts which are detected and handled by the auto-healing loop.
 
 ---
