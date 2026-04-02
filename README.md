@@ -1,5 +1,6 @@
 ![CI](https://github.com/Aishhh-27/multi-tenant-platform/actions/workflows/ci.yml/badge.svg)
-# GitLab Multi-Tenant Environment Automation Platform
+# Multi-Tenant Environment Automation Platform
+Inspired by GitLab Dedicated multi-tenant environment automation systems.
 
 ## Overview
 
@@ -112,16 +113,17 @@ The system detects failing pods and deletes only the affected workloads instead 
 ---
 
 
-## Failure Simulation
+##  Failure Simulation
 
-To simulate a failure scenario:
+Scenario:
+- Pod deleted manually
 
-```bash
-kubectl run crash-test \
-  --image=busybox \
-  -n tenant-a \
-  --restart=Always \
-  -- sh -c "exit 1"
+Result:
+- Kubernetes automatically recreates pod
+- Ensures high availability
+
+This demonstrates self-healing infrastructure.
+
 ```
 
 This triggers repeated restarts which are detected and handled by the auto-healing loop.
@@ -137,6 +139,17 @@ This triggers repeated restarts which are detected and handled by the auto-heali
 5. Failures auto-recovered
 6. Tenant can be deleted cleanly
 
+---
+
+## Scaling Capability
+
+This system is designed to support multiple tenants using:
+- Automated provisioning
+- Namespace isolation
+- Repeatable Terraform modules
+
+Tested with 5–10 tenants (can scale further with cluster capacity).
+
 ## Project Structure
 
 ```
@@ -148,6 +161,14 @@ screenshots/        Dashboard and execution output
 ```
 
 ---
+
+##  Observability
+
+- Prometheus collects cluster and pod metrics
+- Enables monitoring across multiple tenants
+- Alerts can be configured for:
+  - Pod failures
+  - Resource exhaustion
 
 ## Notes
 
