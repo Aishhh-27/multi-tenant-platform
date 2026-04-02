@@ -128,6 +128,15 @@ This triggers repeated restarts which are detected and handled by the auto-heali
 
 ---
 
+##  Tenant Lifecycle
+
+1. Create tenant → CLI triggers Terraform
+2. Namespace created in Kubernetes
+3. Helm deploys application
+4. Prometheus starts monitoring
+5. Failures auto-recovered
+6. Tenant can be deleted cleanly
+
 ## Project Structure
 
 ```
